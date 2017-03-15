@@ -10,5 +10,9 @@ README.html: README.md
 manpages:
 	tools/build_manpages.py
 
+doc:
+	pandoc test.md test.md -s -t man >man/test.1
+	pandoc test.md test.md -s -t html >test.html
+
 clean:
 	rm README.html

@@ -101,7 +101,7 @@ class ManPageFormatter(argparse.HelpFormatter):
         return self.formatter_class(prog=self.prog, **kwargs)
 
     def _markup(self, txt):
-        return txt.replace('-', '\\-')
+        return txt
 
     def _underline(self, string):
         return "__" + string + "__"
@@ -119,23 +119,18 @@ class ManPageFormatter(argparse.HelpFormatter):
         usage = self._format_usage(None, parser._actions,
                                    parser._mutually_exclusive_groups, '')
         usage = usage.replace('%s ' % self._prog, '')
-        usage = '# SYNOPSIS\n \\fB%s\\fR %s\n' % (self._markup(self._prog),
-                                                    usage)
+        usage = '# SYNOPSIS\n%s %s\n' % (self._markup(self._prog), usage)
         return usage
 
-
-
     def _mk_title(self, prog):
-        return '# {0} {1} {2}\n'.format(prog, self._section,
-                                          self._today)
+        return ''
 
     def _make_name(self, parser):
-        return '# %s \\- %s\n' % (parser.prog,
-                                          parser.description)
+        return ''
 
     def _mk_description(self):
         if self._long_desc:
-            long_desc = self._long_desc.replace('\n', '\n.br\n')
+            long_desc = self._long_desc
             return '# DESCRIPTION\n%s\n' % self._markup(long_desc)
         else:
             return ''

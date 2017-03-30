@@ -5,11 +5,13 @@
 # NAME
 [//]: # (!!!GENERATED PART START!!! ID: APT-REPOS/NAME)
 apt-repos
+
 [//]: # (!!!GENERATED PART END!!!)
 
 # SYNOPSIS
 [//]: # (!!!GENERATED PART START!!! ID: APT-REPOS/USAGE)
 usage: apt-repos [-h] [-b BASEDIR] {list,ls,suites,show} ...
+
 
 [//]: # (!!!GENERATED PART END!!!)
 
@@ -20,6 +22,7 @@ Display information about binary PACKAGE(s) in diverse apt-repositories and suit
    a suites-file. For each repository/suite combination a local caching folder
    is created in which downloaded Packages files are stored, similar to the cache
    known from apt-cache which lives in /var/lib/apt/lists.
+
 [//]: # (!!!GENERATED PART END!!!)
 
 # GENERAL OPTIONS
@@ -39,6 +42,8 @@ Display information about binary PACKAGE(s) in diverse apt-repositories and suit
                         created into a subfolder called '<basedir>/.apt-
                         repos_cache'.
 
+
 [//]: # (!!!GENERATED PART END!!!)
+
 
 

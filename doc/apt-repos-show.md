@@ -5,6 +5,7 @@
 # NAME
 [//]: # (!!!GENERATED PART START!!! ID: APT-REPOS-SHOW/NAME)
 apt-repos show
+
 [//]: # (!!!GENERATED PART END!!!)
 
 # SYNOPSIS
@@ -13,11 +14,13 @@ usage: apt-repos show [-h] [-d] [-s SUITE] [-a ARCHITECTURE] [-c COMPONENT]
                       [-r] [-col COLUMNS] [-di DIFF] [-dt DIFF_TOOL] [-nu]
                       package [package ...]
 
+
 [//]: # (!!!GENERATED PART END!!!)
 
 # DESCRIPTION
 [//]: # (!!!GENERATED PART START!!! ID: APT-REPOS-SHOW/DESCRIPTION)
 subcommand show: print details about packages similar to what apt-cache show does
+
 [//]: # (!!!GENERATED PART END!!!)
 
 # GENERAL OPTIONS
@@ -70,6 +73,8 @@ subcommand show: print details about packages similar to what apt-cache show doe
                         spaces if this command has arguments.
   -nu, --no-update      Skip downloading of packages list.
 
+
 [//]: # (!!!GENERATED PART END!!!)
+
 
 

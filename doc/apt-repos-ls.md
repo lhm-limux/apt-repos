@@ -5,6 +5,7 @@
 # NAME
 [//]: # (!!!GENERATED PART START!!! ID: APT-REPOS-LS/NAME)
 apt-repos ls
+
 [//]: # (!!!GENERATED PART END!!!)
 
 # SYNOPSIS
@@ -14,11 +15,13 @@ usage: apt-repos list [-h] [-d] [-s SUITE] [-a ARCHITECTURE] [-c COMPONENT]
                       [-di DIFF] [-dt DIFF_TOOL]
                       package [package ...]
 
+
 [//]: # (!!!GENERATED PART END!!!)
 
 # DESCRIPTION
 [//]: # (!!!GENERATED PART START!!! ID: APT-REPOS-LS/DESCRIPTION)
 subcommand ls: search and print a list of packages
+
 [//]: # (!!!GENERATED PART END!!!)
 
 # GENERAL OPTIONS
@@ -78,6 +81,8 @@ subcommand ls: search and print a list of packages
                         common-lines,--width=<ttyWidth>'. Use , (instead of
                         spaces) to provide arguments for the difftool.
 
+
 [//]: # (!!!GENERATED PART END!!!)
+
 
 

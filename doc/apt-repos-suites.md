@@ -5,17 +5,20 @@
 # NAME
 [//]: # (!!!GENERATED PART START!!! ID: APT-REPOS-SUITES/NAME)
 apt-repos suites
+
 [//]: # (!!!GENERATED PART END!!!)
 
 # SYNOPSIS
 [//]: # (!!!GENERATED PART START!!! ID: APT-REPOS-SUITES/USAGE)
 usage: apt-repos suites [-h] [-d] [-s SUITE] [-v]
 
+
 [//]: # (!!!GENERATED PART END!!!)
 
 # DESCRIPTION
 [//]: # (!!!GENERATED PART START!!! ID: APT-REPOS-SUITES/DESCRIPTION)
 subcommand suites: print a list of registered suites
+
 [//]: # (!!!GENERATED PART END!!!)
 
 # GENERAL OPTIONS
@@ -29,6 +32,8 @@ subcommand suites: print a list of registered suites
   -v, --verbose         also print corresponding sources.list-entries for each
                         suite
 
+
 [//]: # (!!!GENERATED PART END!!!)
+
 
 

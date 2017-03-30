@@ -32,7 +32,7 @@ def writeParserInfosToFile(infos, filename):
                 res += line
                 info = infos.get(m.group(1))
                 if info:
-                    res += info + '\n'
+                    res += info + '\n\n'
                 else:
                    print("ERROR: can't generate part for id '{}'".format(m.group(1)), file=sys.stderr)
 

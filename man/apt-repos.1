@@ -1,9 +1,9 @@
-.TH apt-repos 1 2017\-03\-14
-.SH SYNOPSIS
+apt-repos 1 2017\-03\-29
+# SYNOPSIS
  \fBapt\-repos\fR [-h] [-b BASEDIR] {list,ls,suites,show} ...
 
 
-.SH DESCRIPTION
+# DESCRIPTION
 Display information about binary PACKAGE(s) in diverse apt\-repositories and suites.
 .br
    This tool uses apt\-mechanisms to scan for repositories/suites that are registered in
@@ -13,7 +13,7 @@ Display information about binary PACKAGE(s) in diverse apt\-repositories and sui
    is created in which downloaded Packages files are stored, similar to the cache
 .br
    known from apt\-cache which lives in /var/lib/apt/lists.
-.SH OPTIONS
+# OPTIONS
   {list,ls,suites,show}
                         choose one of these subcommands
     list (ls)           search and list binary and source packages
@@ -28,10 +28,10 @@ Display information about binary PACKAGE(s) in diverse apt\-repositories and sui
                         contain a file named 'suites'. The cache will be
                         created into a subfolder called '<basedir>/.apt-
                         repos_cache'.
-.SH AUTHORS
+AUTHORS
  apt-repos is written and maintained by Christoph Lutz <chrlutz@gmail.com>
  with contributions from the Landeshauptstadt München.
  Other contributors are welcome.
-.SH DISTRIBUTION
+DISTRIBUTION
  provided as debian-Packages created from the sources on github:
  https://github.com/chrlutz/apt-repos

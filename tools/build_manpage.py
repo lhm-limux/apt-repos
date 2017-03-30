@@ -104,13 +104,13 @@ class ManPageFormatter(argparse.HelpFormatter):
         return txt.replace('-', '\\-')
 
     def _underline(self, string):
-        return "\\fI\\s-1" + string + "\\s0\\fR"
+        return "__" + string + "__"
 
     def _bold(self, string):
-        if not string.strip().startswith('\\fB'):
-            string = '\\fB' + string
-        if not string.strip().endswith('\\fR'):
-            string = string + '\\fR'
+        if not string.strip().startswith('**'):
+            string = '**' + string
+        if not string.strip().endswith('**'):
+            string = string + '**'
         return string
 
     def _mk_synopsis(self, parser):
@@ -118,28 +118,25 @@ class ManPageFormatter(argparse.HelpFormatter):
                        parser._mutually_exclusive_groups, prefix='')
         usage = self._format_usage(None, parser._actions,
                                    parser._mutually_exclusive_groups, '')
-
         usage = usage.replace('%s ' % self._prog, '')
-        usage = '.SH SYNOPSIS\n \\fB%s\\fR %s\n' % (self._markup(self._prog),
+        usage = '# SYNOPSIS\n \\fB%s\\fR %s\n' % (self._markup(self._prog),
                                                     usage)
         return usage
 
+
+
     def _mk_title(self, prog):
-        return '.TH {0} {1} {2}\n'.format(prog, self._section,
+        return '# {0} {1} {2}\n'.format(prog, self._section,
                                           self._today)
 
     def _make_name(self, parser):
-        """
-        this method is in consitent with others ... it relies on
-        distribution
-        """
-        return '.SH NAME\n%s \\- %s\n' % (parser.prog,
+        return '# %s \\- %s\n' % (parser.prog,
                                           parser.description)
 
     def _mk_description(self):
         if self._long_desc:
             long_desc = self._long_desc.replace('\n', '\n.br\n')
-            return '.SH DESCRIPTION\n%s\n' % self._markup(long_desc)
+            return '# DESCRIPTION\n%s\n' % self._markup(long_desc)
         else:
             return ''
 
@@ -149,7 +146,7 @@ class ManPageFormatter(argparse.HelpFormatter):
 
         footer = []
         for section, value in sorted(sections.items()):
-            part = ".SH {}\n {}".format(section.upper(), value)
+            part = "# {}\n {}".format(section.upper(), value)
             footer.append(part)
 
         return '\n'.join(footer)
@@ -179,7 +176,7 @@ class ManPageFormatter(argparse.HelpFormatter):
         formatter.add_text(parser.epilog)
 
         # determine help from format above
-        return '.SH OPTIONS\n' + formatter.format_help()
+        return '# OPTIONS\n' + formatter.format_help()
 
     def _format_action_invocation(self, action):
         if not action.option_strings:

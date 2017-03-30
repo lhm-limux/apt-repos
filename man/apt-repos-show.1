@@ -1,13 +1,13 @@
-.TH apt-repos-show 1 2017\-03\-14
-.SH SYNOPSIS
+apt-repos-show 1 2017\-03\-29
+# SYNOPSIS
  \fBapt\-repos show\fR [-h] [-d] [-s SUITE] [-a ARCHITECTURE] [-c COMPONENT] [-r]
                [-col COLUMNS] [-di DIFF] [-dt DIFF_TOOL] [-nu]
                package [package ...]
 
 
-.SH DESCRIPTION
+# DESCRIPTION
 subcommand show: print details about packages similar to what apt\-cache show does
-.SH OPTIONS
+# OPTIONS
   package               Name of a binary PACKAGE or source-package name
                         prefixed as src:SOURCENAME
 
@@ -55,10 +55,10 @@ subcommand show: print details about packages similar to what apt\-cache show do
                         common-lines,--width=<ttyWidth>'. Use _ instead of
                         spaces if this command has arguments.
   -nu, --no-update      Skip downloading of packages list.
-.SH AUTHORS
+AUTHORS
  apt-repos is written and maintained by Christoph Lutz <chrlutz@gmail.com>
  with contributions from the Landeshauptstadt München.
  Other contributors are welcome.
-.SH DISTRIBUTION
+DISTRIBUTION
  provided as debian-Packages created from the sources on github:
  https://github.com/chrlutz/apt-repos
